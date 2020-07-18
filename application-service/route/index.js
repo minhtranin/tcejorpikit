@@ -3,11 +3,10 @@ const Controller = new BaseControllers();
 
 const router = (url, req, res) => {
     const GET = {
-        '/choose': () =>  Controller.get(req, res),
+        '/data-warehouse': () =>  Controller.get(req, res),
         default: () => 'notfound',
     };
     const POST = {
-        '/choose': () =>  Controller.get(req, res),
         default: () => 'notfound',
     }
 

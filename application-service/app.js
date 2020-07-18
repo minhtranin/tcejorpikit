@@ -1,9 +1,9 @@
 const http = require('http');
 const router = require('./route');
 
-http.createServer((req, res) => {
+http.createServer(async(req, res) => {
     try {
-        action(200, 'successful', router(req.url, req, res), res);
+        action(200, 'successful',await router(req.url, req, res), res);
     } catch (error) {
         action(error.status || 500, error.message || 'Internal Service Error !', null, res);
     }
